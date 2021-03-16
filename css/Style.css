@@ -1,3 +1,6 @@
+.jumbotron{
+    padding: 0.5em
+}
 
 .nav-link{
     color: #ffffff
@@ -6,6 +9,28 @@
     color: #000000
 }
 
+.but{
+    margin: 0px 30px 0px 30px
+}
+
+.jumbotron.themer{
+    background-color: red;
+}
+
+.cards-body.themer{
+    background-color: yellow;
+}
+body.themer{
+    background-color: orange;
+}
 .assets/mondriaan.jpg{
     border-radius: 70%
+}
+
+.fst-italic{
+    margin: 10px
+}
+
+.display-3{
+    margin: 5px
 }

@@ -11,24 +11,29 @@
 </head>
 <body>
 	<div class="jumbotron jumbotron-fluid" style="background: #05386B">
-		<p class="text-center fs-1 fw-bold display-3" style="color: #ffffff;">Justin Kousemaker</p>
+		<p class="text-center fs-1 fw-bold display-3 " style="color: #ffffff;">Justin Kousemaker</p>
 		<p class="lead text-center fs-4 fst-italic text-decoration-underline" style="color: #ffffff;">Loves video games and learning about new stuff.</p>
 		<div class="container">
 			<nav>
 				<ul class="nav nav-pills justify-content-center">
-					<li class="nav-item">
+					<li class="nav-item but">
 						<a href="#" class="nav-link active">Home</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item but">
 						<a href="#" class="nav-link">Work</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item but">
 						<a href="#" class="nav-link">Progress</a>
 					</li>
-					<li>
-						<button type="button" class=" btn btn-secondary" data-bs-toggle="tooltip" data-bs-placement="right" title="j.l.kousemaker@gmail.com">
+                    <li class="nav-item">
+						<a type="button" class="nav-link bg-secondary but" data-bs-toggle="tooltip" data-bs-placement="right" title="" data-bs-original-title="j.l.kousemaker@gmail.com">
 							Contact me
-						</button>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a type="button" class="nav-link bg-secondary but theme-switcher">
+							Theme Switcher
+						</a>
 					</li>
 				</ul>
 			</nav>
@@ -38,23 +43,13 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="my-3 col-md-1">
-				<img src="assets/phoenix.png" class="img-fluid card-img-top" style="height: 200px; width: 150px;" />
-				<div>
-					<img src="assets/omen.png" class="img-fluid card-img-top" style="height: 200px; width: 150px;" />
-				</div>
-				<div>
-					<img src="assets/raze.png" class="img-fluid card-img-top" style="height: 200px; width: 150px;" />
-				</div>
-				<div>
-					<img src="assets/valorantlogo.png" class="my-4 img-fluid card-img-top" style="height: 100px; width: 200px;" />
-				</div>
 			</div>
 			<div class="col">
 				<h3 class="mb-3" style="color: #05386B">Programming Experience</h3>
 				<div class="card" style="width: 18rem;">
 					<div class="card-body">
 						<div><strong>Currently Learning</strong></div>
-						C# - CSS - Bootstrap
+						C# - CSS - Bootstrap - JavaScript
 						<img src="assets/html.png" class="img-fluid card-img-top img-thumbnail" alt="HTML/Bootstrap code" />
 						<ul class="list-group list-group-flush">
 							<li class="list-group-item">HTML</li>
@@ -95,7 +90,7 @@
 						<strong>Higher/Lower Game :</strong>
 						This is a program that lets you gamble points, where you have the option to go higher or lower.
 						<div><strong>This Website :</strong></div>
-						I am building this website with HTML/CSS/Bootstrap.
+						I am building this website with HTML/CSS/Bootstrap/JavaScript.
 					</div>
 				</div>
 			</div>
@@ -143,6 +138,8 @@
 	<script>var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
             return new bootstrap.Tooltip(tooltipTriggerEl)
-        })</script>
+        })
+		</script>
+	<script src="js/main.js"></script>
 </body>
 </html>
