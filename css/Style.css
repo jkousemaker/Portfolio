@@ -13,15 +13,35 @@
     margin: 0px 30px 0px 30px
 }
 
-.jumbotron.themer{
+.jumbotron-fluid-theme{
     background-color: red;
 }
 
-.cards-body.themer{
-    background-color: yellow;
+.head{
+    color: #05386B;
+}
+
+.head.themer{
+    color: white;
+}
+
+.jumbotron{
+    background: #05386B
+}
+
+.jumbotron.themer{
+    background: rgb(65, 65, 65);
+}
+
+.white.themer{
+    color: white;
+}
+
+.card-body.themer{
+    background-color: rgb(95, 95, 95);
 }
 body.themer{
-    background-color: orange;
+    background-color: rgb(29, 29, 29);
 }
 .assets/mondriaan.jpg{
     border-radius: 70%
@@ -33,4 +53,8 @@ body.themer{
 
 .display-3{
     margin: 5px
+}
+
+.list-group-item.themer{
+    background-color: rgb(95, 95, 95);
 }
