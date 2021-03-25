@@ -25,12 +25,16 @@ const swapTheme = function(){
 
     console.log(darkMode)
 }
+const buttonStatus = function(){
+    
+}
 themeButton.addEventListener('click', swapTheme)
 
 const localTheme = localStorage.getItem("darkMode")
 
 if (localTheme == "true"){
     swapTheme();
+    document.querySelector('.themeswitch').checked = true;
 }
 
 const emailButton = document.querySelector('.email-getter')

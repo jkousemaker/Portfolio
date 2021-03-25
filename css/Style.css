@@ -34,7 +34,9 @@
 .head{
     color: #053C5E
 }
-
+.card{
+    transition: box-shadow 300ms ease-in-out ;
+}
 .card:hover{
     box-shadow: 1px 5px 10px #888888;
 }
@@ -46,11 +48,19 @@
 .white.themer {
     background-color: rgb(95, 95, 95);
 }
+nav, ul{
+    position: relative
+}
 
 .head.themer {
     color: #9893DA
 }
-
+.switch-container{
+    align-self: flex-end;
+    position: absolute;
+    right: 0;
+    top: 0; 
+}
 .switch {
     position: relative;
     display: inline-block;
