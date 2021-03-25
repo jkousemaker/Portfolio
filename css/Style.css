@@ -1,12 +1,12 @@
 .jumbotron{
-    padding: 0.5em
+    padding: 0.5em;
 }
 
 .nav-link{
-    color: #ffffff
+    color: #ffffff;
 }
 .DarkBG{
-    color: #000000
+    color: #000000;
 }
 
 .list-group {
@@ -15,80 +15,45 @@
     font-size: 12px;
 }
 
-
-.list-group.themer{
-    color: white;
-}
-
 .but{
-    margin: 0px 30px 0px 30px
+    margin: 0px 50px 0px 50px;
 }
-
 
 .head{
-    color: #053C5E
+    color: #053C5E;
 }
+
 .card{
-    transition: box-shadow 300ms ease-in-out ;
+    transition: box-shadow 250ms ease-in-out;
 }
+
 .card:hover{
     box-shadow: 1px 5px 10px #888888;
 }
-.card.themer {
-    background: #9893DA;
-}
 
-.nav-pills .nav-item .nav-link.active-justin {
-    background-color: #7c9c5c;
-}
-.white.themer {
-    background-color: rgb(95, 95, 95);
-}
+
 nav, ul{
-    position: relative
-}
-
-.head.themer {
-    color: #9893DA
+    position: relative;
 }
 
 .jumbotron{
-    background: #053C5E
+    background: #053C5E;
 }
 
-.jumbotron.themer{
-    background: #3c2f41
-}
-
-.white.themer{
-    color: white;
-}
-
-.purple.themer{
-    color: #3c2f41
-}
-
-.card-body.themer{
-    background-color: rgb(95, 95, 95);
-}
-
-body.themer{
-    background-color: #0e1f21
-}
 .assets/mondriaan.jpg{
-    border-radius: 70%
+    border-radius: 70%;
 }
 
 .fst-italic{
-    margin: 10px
+    margin: 10px;
 }
 
 .display-3{
     margin: 0px;
-    color: white;
-    text-shadow : -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black
+    color: rgba(255, 255, 255, 0.863);
+    text-shadow : -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-.list-group-item.themer{
-    background-color: rgb(95, 95, 95);
+.nav-pills .nav-item .nav-link.active-navbut {
+    background-color: #0e7faf;
 }

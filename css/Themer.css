@@ -1,0 +1,38 @@
+.jumbotron.themer{
+    background: #3c2f41;
+}
+
+.card.themer {
+    background: #9893DA;
+}
+
+.list-group.themer{
+    color: white;
+}
+
+.card-body.themer{
+    background-color: #506873;
+}
+
+.list-group-item.themer{
+    background-color: #506873;
+}
+
+.white.themer{
+    color: rgb(177, 177, 177);
+}
+
+.head.themer {
+    color: #0e7fafb6;
+}
+
+body.themer{
+    background-color: #0e1f21;
+}
+
+.purple.themer{
+    color: #9893DA;
+}
+
+
+
