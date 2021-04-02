@@ -8,14 +8,14 @@ let lowerPercentage = 0;
 let profit = 0;
 let higher = false;
 
-const updateBalance = function(){
+const updateStorageBalance = function(){
     balance = parseInt(localStorage.getItem("storageBalance"));
 }
 const pointDisplayerUpdater = function(){
     pointDisplayer.innerHTML = parseInt(balance);
+    updateStorageBalance();
 }
 
-updateBalance();
 pointDisplayerUpdater();
 
 gambleButton.addEventListener('click' , function(){
