@@ -10,12 +10,16 @@ let higher = false;
 
 const updateStorageBalance = function(){
     balance = parseInt(localStorage.getItem("storageBalance"));
+    console.log("Balance has been updated using local storage : " + balance);
+}
+const saveStorageBalance = function(){
+    balance = parseInt(localStorage.setItem("storageBalance", balance));
 }
 const pointDisplayerUpdater = function(){
     pointDisplayer.innerHTML = parseInt(balance);
-    updateStorageBalance();
 }
 
+updateStorageBalance();
 pointDisplayerUpdater();
 
 gambleButton.addEventListener('click' , function(){
@@ -29,7 +33,9 @@ gambleButton.addEventListener('click' , function(){
     
         calculateWin();
     }else{
-        alert("You don't have enough credits.");
+        alert("You don't have enough credits. 100 credits have been added to your balance for a re-try. :)");
+        balance =+ 100;
+        pointDisplayerUpdater();
     }
 })
 
@@ -69,16 +75,16 @@ const calculateWin = function(){
             win();
         }else{
             alert("You have lost.")
-            localStorage.setItem("storageBalance", balance)
             pointDisplayerUpdater();
+            saveStorageBalance();
         }
     }else{
         if (higherPercentage < randomNumber){
             win();
         }else{
             alert("You have lost.")
-            localStorage.setItem("storageBalance", balance)
             pointDisplayerUpdater();
+            saveStorageBalance();
         }
     }
 }
@@ -88,7 +94,7 @@ const win = function(){
     console.log("Old balance: " + balance);
     balance += calculateProfit();
     console.log("Current balance : " + balance);
-    localStorage.setItem("storageBalance", balance)
     pointDisplayerUpdater();
+    saveStorageBalance();
 }
 
