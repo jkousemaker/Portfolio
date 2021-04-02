@@ -19,6 +19,10 @@
     margin: 0px 50px 0px 50px;
 }
 
+.points{
+    text-align: center;
+}
+
 .head{
     color: #053C5E;
 }
@@ -31,6 +35,12 @@
     box-shadow: 1px 5px 10px #888888;
 }
 
+.card-gambling{
+    margin: auto;
+    width: 50%;
+    height: 30rem;
+    padding: 10px;
+}
 
 nav, ul{
     position: relative;
@@ -56,4 +66,9 @@ nav, ul{
 
 .nav-pills .nav-item .nav-link.active-navbut {
     background-color: #0e7faf;
+}
+
+.gamble-button{
+    width: 20%;
+    margin: auto;
 }

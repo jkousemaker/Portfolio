@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/Style.css" />
+	<link rel="stylesheet" href="css/Switch-Button.css" />
+	<link rel="stylesheet" href="css/Themer.css" />
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+	<title>Portofolio</title>
+</head>
+<body>
+	<div class="jumbotron jumbotron-fluid" style="margin: 0px 0px 8px 0px">
+		<p class="text-center fs-1 fw-bold display-3">Justin Kousemaker</p>
+		<p class="lead text-center fs-4 fst-italic text-decoration-underline" style="color: rgb(177, 177, 177);">Loves video games and learning about new stuff.</p>
+		<div class="row">
+			<div class="container">
+				<nav>
+					<ul class="nav nav-pills justify-content-center">
+						<li class="nav-item but">
+							<a href="Site.html" class="nav-link">Home</a>
+						</li>
+						<li class="nav-item but">
+							<a href="Work.html" class="nav-link">Work</a>
+						</li>
+						<li class="nav-item but">
+							<a href="Gamble.html" class="nav-link active-navbut">Gamble Game</a>
+						</li>
+						<li class="nav-item">
+							<a type="button" class="nav-link bg-secondary but email-getter" data-bs-toggle="tooltip" data-bs-placement="right" title="" data-bs-original-title="j.l.kousemaker@gmail.com (Click to copy)">
+								Contact me
+							</a>
+						</li>
+					</ul>
+					<div class="switch-container">
+						<label class="switch">
+							<input type="checkbox" class="themeswitch">
+							<span class="slider round theme-switcher"></span>
+						</label>
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="my-3 col-md-1">
+			</div>
+				<div class="card card-gambling">
+					<div class="card-body">
+						<div class="d-flex justify-content-center">
+							<div class="col">
+								<div class="display-3">
+									<p class="points">0</p>
+								</div>
+							<div>
+							<div class="white points">Points</div>
+							<a type="button" class="nav-link bg-secondary but gamble-button">
+								Gamble
+							</a>
+						</div>
+					</div>
+				</div>
+
+		</div>
+	</div>
+	
+	<script src="js/main.js"></script>
+	<script src="js/Gamble.js"></script>
+</body>
+</html>

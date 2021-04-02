@@ -2,8 +2,16 @@
     background: #3c2f41;
 }
 
+body.themer{
+    background-color: #123135;
+}
+
 .card.themer {
     background: #9893DA;
+}
+
+.card:hover.themer{
+    box-shadow: 1px 5px 10px #9893daa8;
 }
 
 .list-group.themer{
@@ -26,12 +34,12 @@
     color: #0e7fafb6;
 }
 
-body.themer{
-    background-color: #0e1f21;
+.purple.themer{
+    color: #492c55cc;
 }
 
-.purple.themer{
-    color: #9893DA;
+.nav-pills .nav-item .nav-link.active-navbut.themer {
+    background-color: #9893DA;
 }
 
 
