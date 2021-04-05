@@ -72,3 +72,28 @@ nav, ul{
     width: 20%;
     margin: auto;
 }
+
+.sliderPercentage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; 
+}
+
+#slider-pointer{
+    color: red;
+}
+
+.higherLower{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.coin-input{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}

@@ -1,19 +1,28 @@
 const gambleButton = document.querySelector('.gamble-button');
 const pointDisplayer = document.querySelector('.points');
+const percentageSlider = document.getElementById("customRange2");
+const higherLowerSelector = document.getElementById("higherLower");
+let sliderOutput = document.getElementById("slider-pointer");
+
 let balance = 1000;
 let input = 0;
+let hLower = 0;
 let chosenPercentage = 0;
 let higherPercentage = 0;
 let lowerPercentage = 0;
 let profit = 0;
 let higher = false;
 
+percentageSlider.oninput = function(){
+    sliderOutput.outerHTML = percentageSlider.value;
+}
+
 const updateStorageBalance = function(){
     balance = parseInt(localStorage.getItem("storageBalance"));
     console.log("Balance has been updated using local storage : " + balance);
 }
 const saveStorageBalance = function(){
-    balance = parseInt(localStorage.setItem("storageBalance", balance));
+    localStorage.setItem("storageBalance", 1000)  //Change 1000 to balance!!!!!!!!!!!!!!
 }
 const pointDisplayerUpdater = function(){
     pointDisplayer.innerHTML = parseInt(balance);
@@ -25,12 +34,25 @@ pointDisplayerUpdater();
 gambleButton.addEventListener('click' , function(){
     console.log("Button Click-------")
     if(balance > 0){
-        input = prompt("How many coins do you want to put in?");
+        chosenPercentage = percentageSlider.value;
+        hLower = higherLowerSelector.value;
+        input = document.getElementById("coin-input").value
+        console.log("Input log: " + input);
+        console.log("Input percentage log: " + percentageSlider.value);
         balance -= input;
         pointDisplayerUpdater(); 
         console.log("Current balance : " + balance);  
-        choosePercentage();
-    
+        // choosePercentage();
+        // 
+        console.log("Input higher lower: " + hLower);
+        
+        if (hLower == "higher"){
+            higherPercentage = 100 - chosenPercentage;
+            console.log("You chose higher, these are your percentages : " + higherPercentage + "% - 100%");
+        }else{
+            console.log("You chose lower, these are your percentages : " + "0% - " + chosenPercentage + "%");
+        }
+
         calculateWin();
     }else{
         alert("You don't have enough credits. 100 credits have been added to your balance for a re-try. :)");
@@ -39,7 +61,7 @@ gambleButton.addEventListener('click' , function(){
     }
 })
 
-const choosePercentage = function(){  
+/* const choosePercentage = function(){  
     console.log("choosePercentage-------")
     chosenPercentage = prompt("What percentage to win?");
     if (chosenPercentage >= 95){
@@ -54,7 +76,7 @@ const choosePercentage = function(){
     }else{
         console.log("You chose lower, these are your percentages : " + "0% - " + chosenPercentage + "%");
     }
-}
+}*/
 
 const calculateProfit = function(){
     console.log("calculateProfit-------")
@@ -70,7 +92,10 @@ const calculateWin = function(){
     let randomNumber = Math.floor(Math.random() * 101); 
 
     console.log("Random number : " + randomNumber);
-    if(!higher){
+
+
+
+    if(higher){
         if (chosenPercentage > randomNumber){
             win();
         }else{

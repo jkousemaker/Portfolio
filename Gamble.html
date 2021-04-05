@@ -55,11 +55,22 @@
 								<div class="display-3">
 									<p class="points">0</p>
 								</div>
-							<div>
+							
 							<div class="white points">Points</div>
+							<label for="coin-input" class="coin-input">Coin input:</label><br>
+  							<input type="text" id="coin-input" class="coin-input" name="coin-input"><br>
+							<label for="customRange1" class="white form-label">Percentage to win:</label>
+							<input type="range" class="form-range" min="0" max="100" id="customRange2">
+							<span class="sliderPercentage">Value : </span>
+							<span class="sliderPercentage" id="slider-pointer">50</span>
+							<input type="radio" class="higherLower" id="higherLower" name="higherLower" value="higher">
+							<label for="higher" class="higherLower">Higher</label><br>
+							<input type="radio" class="higherLower" id="higherLower" name="higherLower" value="lower">
+							<label for="higher" class="higherLower">Lower</label><br>
 							<a type="button" class="nav-link bg-secondary but gamble-button">
 								Gamble
 							</a>
+							</div>
 						</div>
 					</div>
 				</div>
