@@ -91,6 +91,22 @@ nav, ul{
     text-align: center;
 }
 
+.button-lower{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.button-higher{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+
+
 .coin-input{
     display: block;
     margin-left: auto;
