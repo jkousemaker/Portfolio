@@ -1,8 +1,8 @@
 const gambleButton = document.querySelector('.glow-on-hover');
 const pointDisplayer = document.querySelector('.points');
 const percentageSlider = document.getElementById("customRange2");
-const higherSelector = document.getElementById("higher");
-const lowerSelector = document.getElementById("lower");
+const higherSelector = document.getElementById("higher").checked;
+const lowerSelector = document.getElementById("lower").checked;
 
 let sliderOutput = document.getElementById("slider-pointer");
 
@@ -14,15 +14,13 @@ let higherPercentage = 0;
 let lowerPercentage = 0;
 let profit = 0;
 
-console.log("higher : " + higherSelector.value);
-console.log("lower : " + lowerSelector.value);
+console.log("higher : " + higherSelector);
+console.log("lower : " + lowerSelector);
 
 /*
-1. Higher/Lower werkt niet.
 2. Knoppen mooier maken.
 3. Interface overhaul.
 4. Animations.
-5. High/lower radio buttons geven altijd on aan.
 6. radio buttons zelfde style als gamble button geven.
 */
 
@@ -52,11 +50,9 @@ pointDisplayerUpdater();
 
 gambleButton.addEventListener('click' , function(){
     console.log("Button Click-------")
-    console.log("higher : " + higherSelector.value);
-    console.log("lower : " + lowerSelector.value);
+    console.log("higher : " + higherSelector);
+    console.log("lower : " + lowerSelector);
     input = document.getElementById("coin-input").value
-    hLower = higherLowerSelector.value;
-    console.log("hLower" + hLower);
     chosenPercentage = percentageSlider.value;
 
     if(balance > 0 && input > 0 && input <= balance){
@@ -69,11 +65,13 @@ gambleButton.addEventListener('click' , function(){
         // 
         console.log("Input higher lower: " + hLower);
         
-        if (hLower == "higher"){
+        if (higherSelector){
             higherPercentage = 100 - chosenPercentage;
             console.log("You chose higher, these are your percentages : " + higherPercentage + "% - 100%");
-        }else{
+        }else if(lowerSelector){
             console.log("You chose lower, these are your percentages : " + "0% - " + chosenPercentage + "%");
+        }else{
+            alert("You have to select if you want to go Higher or Lower!")
         }
 
         calculateWin();
