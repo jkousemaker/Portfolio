@@ -3,6 +3,7 @@ const pointDisplayer = document.querySelector('.points');
 const percentageSlider = document.getElementById("customRange2");
 const higherSelector = document.getElementById("higher").checked;
 const lowerSelector = document.getElementById("lower").checked;
+const winnerImage = document.getElementById("winner");
 
 let sliderOutput = document.getElementById("slider-pointer");
 
@@ -147,5 +148,10 @@ const win = function(){
     console.log("Current balance : " + balance);
     pointDisplayerUpdater();
     saveStorageBalance();
+    winnerImage.classList.add("won");
+    setTimeout(winnerImageFade, 1000);
 }
 
+function winnerImageFade(){
+    winnerImage.classList.remove("won");
+}
