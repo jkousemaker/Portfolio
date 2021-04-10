@@ -3,11 +3,11 @@ const pointDisplayer = document.querySelector('.points');
 const percentageSlider = document.getElementById("customRange2");
 let higherSelector = document.getElementById("higher").checked;
 let lowerSelector = document.getElementById("lower").checked;
-const winnerImage = document.getElementById("winner");
 
 let sliderOutput = document.getElementById("slider-pointer");
 
 let balance = 1000;
+let oldBalance = 0;
 let input = 0;
 let hLower = 0;
 let chosenPercentage = 0;
@@ -16,15 +16,11 @@ let lowerPercentage = 0;
 let profit = 0;
 let winner = true;
 
-console.log("higher : " + higherSelector);
-console.log("lower : " + lowerSelector);
-
-/*
-2. Knoppen mooier maken.
-3. Interface overhaul.
-4. Animations.
-6. radio buttons zelfde style als gamble button geven.
-*/
+if(higherSelector){
+    console.log("higher : " + higherSelector);
+}else{
+    console.log("lower : " + lowerSelector);
+}
 
 percentageSlider.oninput = function(){
     sliderOutput.outerHTML = percentageSlider.value;
@@ -39,6 +35,7 @@ const updateStorageBalance = function(){
     }else{
         balane = 1000;
     }
+    
 }
 const saveStorageBalance = function(){
     localStorage.setItem("storageBalance", 1000)  //Change 1000 to balance!!!!!!!!!!!!!!
@@ -57,31 +54,34 @@ updateStorageBalance();
 pointDisplayerUpdater();
 
 gambleButton.addEventListener('click' , function(){
-    console.log("Button Click-------")
+    console.clear();
+    console.log("Button Click-----------------")
+    oldBalance = balance;
     higherSelector = document.getElementById("higher").checked;
     lowerSelector = document.getElementById("lower").checked;
-    console.log("higher : " + higherSelector);
-    console.log("lower : " + lowerSelector);
+    if(higherSelector){
+        console.log("higher : " + higherSelector);
+    }else{
+        console.log("lower : " + lowerSelector);
+    }
+    console.log("-----------------------------")
     input = document.getElementById("coin-input").value
     chosenPercentage = percentageSlider.value;
 
     if(balance > 0 && input > 0 && input <= balance){
         console.log("Input log: " + input);
         console.log("Input percentage log: " + percentageSlider.value);
+        console.log("-----------------------------")
         balance -= input;
         pointDisplayerUpdater(); 
-        console.log("Current balance : " + balance);  
         // choosePercentage();
         // 
-        console.log("Input higher lower: " + hLower);
         
         if (higherSelector){
             higherPercentage = 100 - chosenPercentage;
             console.log("You chose higher, these are your percentages : " + higherPercentage + "% - 100%");
-        }else if(lowerSelector){
-            console.log("You chose lower, these are your percentages : " + "0% - " + chosenPercentage + "%");
         }else{
-            alert("You have to select if you want to go Higher or Lower!")
+            console.log("You chose lower, these are your percentages : " + "0% - " + chosenPercentage + "%");
         }
 
         calculateWin();
@@ -96,35 +96,18 @@ gambleButton.addEventListener('click' , function(){
     }
 })
 
-
-/* const choosePercentage = function(){  
-    console.log("choosePercentage-------")
-    chosenPercentage = prompt("What percentage to win?");
-    if (chosenPercentage >= 95){
-        alert("You have to choose a percentage under 95.");
-        chosenPercentage = prompt("What percentage to win?");
-    }
-    console.log("Chosen Percentage : " + chosenPercentage);
-    higher = confirm("Do you want to play higher or lower? Press cancel for lower.")
-    if (higher){
-        higherPercentage = 100 - chosenPercentage;
-        console.log("You chose higher, these are your percentages : " + higherPercentage + "% - 100%");
-    }else{
-        console.log("You chose lower, these are your percentages : " + "0% - " + chosenPercentage + "%");
-    }
-}*/
-
 const calculateProfit = function(){
-    console.log("calculateProfit-------")
+    console.log("calculateProfit--------------")
     let stakes = 100 / chosenPercentage;
     console.log("stakes: " + stakes);
     profit = input * stakes;
     console.log("profit: " + profit);
+    console.log("-----------------------------")
     return profit;
 }
 
 const calculateWin = function(){
-    console.log("calculateWin-------")
+    console.log("calculateWin-----------------")
     let randomNumber = Math.floor(Math.random() * 101); 
 
     console.log("Random number : " + randomNumber);
@@ -138,6 +121,9 @@ const calculateWin = function(){
             alert("You have lost.")
             pointDisplayerUpdater();
             saveStorageBalance();
+            console.log("You have lost!")
+            console.log("This was your old balance : " + oldBalance);
+            console.log("This is your new balance : " + balance);
         }
     }else{
         if (higherPercentage < randomNumber){
@@ -146,21 +132,18 @@ const calculateWin = function(){
             alert("You have lost.")
             pointDisplayerUpdater();
             saveStorageBalance();
+            console.log("You have lost!")
+            console.log("This was your old balance : " + oldBalance);
+            console.log("This is your new balance : " + balance);
         }
     }
 }
 
 const win = function(){
     console.log("win-------")
-    console.log("Old balance: " + balance);
     balance += calculateProfit();
+    console.log("Old Balance : " + oldBalance);
     console.log("Current balance : " + balance);
     pointDisplayerUpdater();
     saveStorageBalance();
-    winnerImage.classList.add("won");
-    setTimeout(winnerImageFade, 1000);
-}
-
-function winnerImageFade(){
-    winnerImage.classList.remove("won");
 }

@@ -23,7 +23,7 @@ const swapTheme = function(){
         localStorage.setItem("darkMode", darkMode);
     }
 
-    console.log(darkMode)
+    console.log("Dark mode is: " + darkMode);
 }
 const buttonStatus = function(){
     
