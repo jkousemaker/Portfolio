@@ -14,6 +14,7 @@ let chosenPercentage = 0;
 let higherPercentage = 0;
 let lowerPercentage = 0;
 let profit = 0;
+let winner = true;
 
 console.log("higher : " + higherSelector);
 console.log("lower : " + lowerSelector);
@@ -43,7 +44,13 @@ const saveStorageBalance = function(){
     localStorage.setItem("storageBalance", 1000)  //Change 1000 to balance!!!!!!!!!!!!!!
 }
 const pointDisplayerUpdater = function(){
+    pointDisplayer.classList.add("fade-out");
+    pointDisplayer.classList.remove("fade-out");
     pointDisplayer.innerHTML = parseInt(balance);
+    pointDisplayer.classList.remove("fade-in");
+    pointDisplayer.classList.remove("fade-in");
+    
+
 }
 
 updateStorageBalance();
