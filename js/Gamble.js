@@ -99,7 +99,7 @@ gambleButton.addEventListener('click' , function(){
 const calculateProfit = function(){
     console.log("calculateProfit--------------")
     let stakes = 100 / chosenPercentage;
-    console.log("stakes: " + stakes);
+    console.log("stakes: " + input + "(input) x " + stakes);
     profit = input * stakes;
     console.log("profit: " + profit);
     console.log("-----------------------------")
@@ -140,7 +140,7 @@ const calculateWin = function(){
 }
 
 const win = function(){
-    console.log("win-------")
+    console.log("win--------------------------")
     balance += calculateProfit();
     console.log("Old Balance : " + oldBalance);
     console.log("Current balance : " + balance);
