@@ -1,8 +1,8 @@
 const gambleButton = document.querySelector('.glow-on-hover');
 const pointDisplayer = document.querySelector('.points');
 const percentageSlider = document.getElementById("customRange2");
-const higherSelector = document.getElementById("higher").checked;
-const lowerSelector = document.getElementById("lower").checked;
+let higherSelector = document.getElementById("higher").checked;
+let lowerSelector = document.getElementById("lower").checked;
 const winnerImage = document.getElementById("winner");
 
 let sliderOutput = document.getElementById("slider-pointer");
@@ -51,6 +51,8 @@ pointDisplayerUpdater();
 
 gambleButton.addEventListener('click' , function(){
     console.log("Button Click-------")
+    higherSelector = document.getElementById("higher").checked;
+    lowerSelector = document.getElementById("lower").checked;
     console.log("higher : " + higherSelector);
     console.log("lower : " + lowerSelector);
     input = document.getElementById("coin-input").value

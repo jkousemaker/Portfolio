@@ -4,10 +4,13 @@
 
 .nav-link{
     color: #ffffff;
+    border-radius: 60px;
 }
 .DarkBG{
     color: #000000;
 }
+
+
 
 .list-group {
     text-decoration: underline;

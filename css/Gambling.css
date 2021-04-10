@@ -1,0 +1,44 @@
+.centered {
+    margin-top: 22%;
+    font-size: 90px;
+    font-weight: 500;
+}
+
+.card1 {
+  padding: 1.5em;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  margin: auto;
+  margin-top: 10%;
+  opacity: 70%;
+  border-style: groove;
+}
+
+.card2 {
+    padding: 1em;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+}
+
+p.slider-pointer {
+    font-size: large;
+}
+
+.question {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.btn-switch {
+    margin-bottom: 30px;
+}
+
+.coin-input {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
