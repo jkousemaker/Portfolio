@@ -5,7 +5,7 @@ const themeButton = document.querySelector('.theme-switcher')
 let darkMode = false;
 
 const swapTheme = function(){
-    const elements = document.querySelectorAll('.card:hover, .active-navbut, .purple, .display-3, .list-group, .white, .card, body, .card-body, .list-group-item, .head, .jumbotron, .list-group-item, .white')
+    const elements = document.querySelectorAll('.buttons-active, .card:hover, .active-navbut, .purple, .display-3, .list-group, .white, .card, body, .card-body, .list-group-item, .head, .jumbotron, .list-group-item, .white')
 
     for (let i = 0; i < elements.length; i++){
         elements[i].classList.toggle("themer")

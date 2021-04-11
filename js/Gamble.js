@@ -1,6 +1,6 @@
 const gambleButton = document.querySelector('.glow-on-hover');
 const pointDisplayer = document.querySelector('.points');
-const percentageSlider = document.getElementById("customRange2");
+let percentageSlider = document.getElementById("customRange2");
 let higherSelector = document.getElementById("higher").checked;
 let lowerSelector = document.getElementById("lower").checked;
 
@@ -23,7 +23,9 @@ if(higherSelector){
 }
 
 percentageSlider.oninput = function(){
+    while (percentageSlider.oninput){
     sliderOutput.outerHTML = percentageSlider.value;
+    }
 }
 
 const updateStorageBalance = function(){

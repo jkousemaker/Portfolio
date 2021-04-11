@@ -10,7 +10,7 @@
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
   border-radius: 30px;
   margin: auto;
-  margin-top: 10%;
+  margin-top: 8%;
   opacity: 70%;
   border-style: groove;
 }
@@ -23,6 +23,11 @@
     background-color: white;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     border-radius: 30px;
+    transition: box-shadow 250ms ease-in-out;
+}
+
+.card2:hover {
+    box-shadow: 1px 5px 10px #888888;
 }
 
 p.slider-pointer {
