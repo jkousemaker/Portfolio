@@ -1,10 +1,10 @@
 .glow-on-hover {
-    width: 220px;
+    width: 200px;
     height: 50px;
     border: none;
     outline: none;
     color: #fff;
-    background: #111;
+    background: rgb(252, 0, 0);
     cursor: pointer;
     position: relative;
     z-index: 0;
@@ -13,11 +13,13 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    font-size: 25px;
+    letter-spacing: 3px;
 }
 
 .glow-on-hover:before {
     content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    background: linear-gradient(45deg, #aa4b6b, #6b6b83, #3b8d99, #12c2e95b, #c471ed, #f64f5a52);
     position: absolute;
     top: -2px;
     left:-2px;

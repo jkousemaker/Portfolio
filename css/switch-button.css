@@ -1,8 +1,8 @@
 .switch-container{
     align-self: flex-end;
     position: absolute;
-    right: 0;
-    top: 0; 
+    right: 10px;
+    top: 35px; 
 }
 .switch {
     position: relative;

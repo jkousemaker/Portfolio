@@ -8,9 +8,11 @@
 	<link rel="stylesheet" href="css/Themer.css" />
 	<link rel="stylesheet" href="css/Gamble-Button.css" />
 	<link rel="stylesheet" href="css/Radio-Button.css" />
-	<link rel="stylesheet" href="css/winner-image.css" />
 	<link rel="stylesheet" href="css/Gambling.css" />
 	<link rel="stylesheet" href="css/Point-Fader.css" />
+	<link rel="stylesheet" href="css/Slider.css" />
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Anton&family=Pacifico&display=swap" rel="stylesheet">
 
 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
@@ -40,12 +42,14 @@
 							</button>
 						</li>
 					</ul>
+					
 					<div class="switch-container">
 						<label class="switch">
 							<input type="checkbox" class="themeswitch">
 							<span class="slider round theme-switcher"></span>
 						</label>
 					</div>
+					
 				</nav>
 			</div>
 		</div>
@@ -60,23 +64,31 @@
 							<div class="inputCoins">
 								<input type="text" id="coin-input" class="form-control" placeholder="Enter how many coins you want to gamble :"><br>
 							</div>
-							<label for="customRange1" class="white form-label">Percentage to win:</label>
-							<input type="range" class="form-range" min="0" max="100" id="customRange2">
-							<p>Value : <span><p class="sliderPercentage" id="slider-pointer">50</p></span></p>
+							<label for="id3" class="white form-label">Percentage to win:</label>
+							<p style="margin-bottom: 0; height: 19px">
+								<span>0</span>
+								<input type="range" min="1" max="100" value="50" class="PercentageSlider" id="id3">
+								<span style="top: 0px;">100</span>
+							</p>
+							<p>
+							Value : <span class="sliderPercentage" style="margin-bottom: 10px;"id="slider-pointer">50</span>
+							</p>
 							<p class="btn-switch">					
-								<input type="radio" id="higher" name="switch" class="btn-switch__radio btn-switch__radio_yes" />
-								<input type="radio" checked id="lower" name="switch" class="btn-switch__radio btn-switch__radio_no" />		
+								<input type="radio" onclick=" Higher()" id="higher" name="switch" class="btn-switch__radio btn-switch__radio_yes" />
+								<input type="radio" onclick=" Lower()" checked id="lower" name="switch" class="btn-switch__radio btn-switch__radio_no" />		
 								<label for="higher" class="btn-switch__label btn-switch__label_yes"><span class="btn-switch__txt">Higher</span></label>								 
 								<label for="lower" class="btn-switch__label btn-switch__label_no"><span class="btn-switch__txt">Lower</span></label>							
 							</p>
-							<button class="glow-on-hover" type="button">Gamble!</button>
+							<button class="glow-on-hover" style="margin-top: 0px;" type="button">Gamble!</button>
 						</div>
 					</div>
 					<div class="col-md-3">
-					<div class="card3">
-						<div class=" points centered">0</div>
-						<h1 class="display-3">Points</h1>
-					</div>
+							<p class="winner">Winner!</p>
+							<p class="loser">Loser!</p>
+						<div class="card3">
+							<div class="points centered">0</div>
+							<h1 class="display-3">Points</h1>
+						</div>
 					</div>
 				</div>
 			</div>

@@ -1,0 +1,37 @@
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    .PercentageSlider {
+      overflow: hidden;
+      width: 500px;
+      -webkit-appearance: none;
+      background-color: #a7a7aac9;
+      border-radius: 16px;
+    }
+    
+    .PercentageSlider::-webkit-slider-runnable-track {
+      height: 20px;
+      -webkit-appearance: none;
+      color: #13bba4;
+      margin-top: -1px;
+    }   
+    
+    .PercentageSlider::-webkit-slider-thumb {
+      width: 20px;
+      -webkit-appearance: none;
+      height: 20px;
+      border-radius: 16px;
+      cursor: ew-resize;
+      background: #7e7e7e;
+      box-shadow: -300px 0 0 290px #9893DA;
+    }
+
+    .PercentageSlider.higher {
+        background-color: #9893DA;
+
+    }
+
+    .PercentageSlider::-webkit-slider-thumb.higher {
+        box-shadow: -300px 0 0 300px #2a2a2ec9;
+    }
+
+}
+

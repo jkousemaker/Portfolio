@@ -1,10 +1,23 @@
 const gambleButton = document.querySelector('.glow-on-hover');
 const pointDisplayer = document.querySelector('.points');
-let percentageSlider = document.getElementById("customRange2");
+const winnerText = document.querySelector('.winner');
+const loserText = document.querySelector('.loser');
+let percentageSlider = document.getElementById("id3");
 let higherSelector = document.getElementById("higher").checked;
 let lowerSelector = document.getElementById("lower").checked;
-
 let sliderOutput = document.getElementById("slider-pointer");
+
+percentageSlider.oninput = function(){
+    sliderOutput.innerHTML = this.value;
+}
+
+function Higher(){
+    percentageSlider.classList.add("higher");
+}
+
+function Lower(){
+    percentageSlider.classList.remove("higher");
+}
 
 let balance = 1000;
 let oldBalance = 0;
@@ -22,11 +35,6 @@ if(higherSelector){
     console.log("lower : " + lowerSelector);
 }
 
-percentageSlider.oninput = function(){
-    while (percentageSlider.oninput){
-    sliderOutput.outerHTML = percentageSlider.value;
-    }
-}
 
 const updateStorageBalance = function(){
     balanceStorage = parseInt(localStorage.getItem("storageBalance"));
@@ -48,9 +56,9 @@ const pointDisplayerUpdater = function(){
     pointDisplayer.innerHTML = parseInt(balance);
     pointDisplayer.classList.remove("fade-in");
     pointDisplayer.classList.remove("fade-in");
-    
-
 }
+
+
 
 updateStorageBalance();
 pointDisplayerUpdater();
@@ -84,6 +92,7 @@ gambleButton.addEventListener('click' , function(){
             console.log("You chose higher, these are your percentages : " + higherPercentage + "% - 100%");
         }else{
             console.log("You chose lower, these are your percentages : " + "0% - " + chosenPercentage + "%");
+            lowerPercentage = chosenPercentage;
         }
 
         calculateWin();
@@ -117,10 +126,13 @@ const calculateWin = function(){
 
 
     if(higher){
-        if (chosenPercentage > randomNumber){
+        if (higherPercentage < randomNumber){
+            winnerText.classList.add("result");
+            setTimeout(() => {  winnerText.classList.remove("result"); }, 2000);
             win();
         }else{
-            alert("You have lost.")
+            loserText.classList.add("result");
+            setTimeout(() => {  loserText.classList.remove("result"); }, 2000);
             pointDisplayerUpdater();
             saveStorageBalance();
             console.log("You have lost!")
@@ -128,10 +140,13 @@ const calculateWin = function(){
             console.log("This is your new balance : " + balance);
         }
     }else{
-        if (higherPercentage < randomNumber){
+        if (lowerPercentage < randomNumber){
+            winnerText.classList.add("result");
+            setTimeout(() => {  winnerText.classList.remove("result");; }, 2000);
             win();
         }else{
-            alert("You have lost.")
+            loserText.classList.add("result");
+            setTimeout(() => {  loserText.classList.remove("result");; }, 2000);
             pointDisplayerUpdater();
             saveStorageBalance();
             console.log("You have lost!")

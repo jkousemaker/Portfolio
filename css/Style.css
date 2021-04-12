@@ -1,18 +1,23 @@
 .jumbotron{
     padding: 1em;
-    padding-bottom: 2em;
+    padding-bottom: 20px;
 }
 
 .buttons, .buttons-active {
     border-radius: 16px;
     cursor: pointer;
     border: none;
-    padding: 12px 14px;
+    padding: 10px 14px;
     overflow: hidden;
-    width: 125.94px;
+    width: 1000.94px;
     position: relative;
     margin: 0px 50px 0px 50px;
     text-decoration: none;
+    font-size: 20px;
+}
+
+.buttons:hover, .buttons-active {
+    font-weight: 600;
 }
 
 .buttons, .buttons-active{
@@ -65,11 +70,6 @@
 
 .points.update {
     opacity:0;
-}
-
-.winner {
-    width: 50px;
-    height: 50px;
 }
 
 .head{

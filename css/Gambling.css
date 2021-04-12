@@ -1,34 +1,83 @@
-.centered {
-    margin-top: 22%;
+.points {
     font-size: 90px;
-    font-weight: 500;
+    font-weight: 600;
+    text-shadow: 2px 2px 5px black;
+    color: rgba(255, 255, 255, 0.836);
+}
+
+body.themer {
+    background: linear-gradient(to right, #aa4b6b, #6b6b83, #3b8d99);
+    padding-bottom: 156px
 }
 
 .card1 {
   padding: 1.5em;
-  background-color: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.836);
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
   border-radius: 30px;
   margin: auto;
   margin-top: 8%;
   opacity: 70%;
-  border-style: groove;
 }
 
 .card2 {
+    opacity: 100%;
     padding-top: 2em;
     padding-bottom: 2em;
     padding-right: 6em;
     padding-left: 6em;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.836);
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     border-radius: 30px;
     transition: box-shadow 250ms ease-in-out;
 }
 
 .card2:hover {
-    box-shadow: 1px 5px 10px #888888;
+    box-shadow: 1px 5px 10px #000000a8;
 }
+
+.card3 {
+    align-self: center;
+    justify-self: center;
+}
+
+.col-md-3 {
+    position: relative;
+    display: grid;
+}
+
+
+.winner, .loser {
+    position: absolute;
+    top: 30px;
+    left: 0px;
+    right: 0px;
+    font-size: 60px;
+    font-family: 'Pacifico', cursive;
+    letter-spacing: 6px;
+    text-decoration: underline;
+    font-weight: 100;
+    text-shadow: 2px 2px 5px #15b9ff;
+    transition: opacity 250ms ease-in-out;
+    opacity: 0;
+}
+
+.winner {
+    color: #0e7faf;
+}
+
+.loser {
+    color: rgb(131, 1, 1);
+}
+
+.winner.result {
+    opacity: 1;
+}
+
+.loser.result {
+    opacity: 1;
+}
+
 
 p.slider-pointer {
     font-size: large;
@@ -38,6 +87,8 @@ p.slider-pointer {
     font-size: 2.5em;
     font-weight: bold;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 5px black;
+    color: rgba(255, 255, 255, 0.836);
 }
 
 .btn-switch {
@@ -70,7 +121,7 @@ p.slider-pointer {
 }
 
 #slider-pointer{
-    color: red;
+    color: rgba(255, 0, 0, 0.699);
 }
 
 .higherLower{
