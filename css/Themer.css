@@ -2,16 +2,20 @@
     background: linear-gradient(to right, #3f3066, #9e7888);
     border:ridge;
     border-color: #9893DA;
-    border-bottom-left-radius: 40%;
-    border-bottom-right-radius: 40%;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
 }
 
 .card1.themer {
     background:  linear-gradient(to right, #12c2e95b, #c471ed, #f64f5a52);
 }
 
-body.themer{
-    background-color: #123135;
+body.themer {
+    background: linear-gradient(to left, #642b73,#9e7888, #c6426e);
+}
+
+.cardd.themer, .cardd-body.themer, .carddd.themer{
+    background-color: #715678;
 }
 
 .card.themer {
@@ -27,11 +31,11 @@ body.themer{
 }
 
 .card-body.themer{
-    background-color: #506873;
+    background-color: #715678;
 }
 
 .list-group-item.themer {
-    background-color: #506873;
+    background-color: #715678;
 }
 
 .buttons:hover.themer {
@@ -47,11 +51,11 @@ body.themer{
 }
 
 .head.themer {
-    color: #0e7fafb6;
+    color: rgb(247, 247, 247);
 }
 
 .purple.themer{
-    color: #492c55cc;
+    color: #ebebeccc;
 }
 
 

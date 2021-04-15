@@ -1,10 +1,22 @@
+* {
+    transition-duration: 0.4s;
+}
+
 .jumbotron{
     padding: 1em;
     padding-bottom: 20px;
 }
 
+.card-imge {
+    border-radius: 30px;
+}
+
+.purple {
+    margin-bottom: 7px;
+}
+
 .buttons, .buttons-active {
-    border-radius: 16px;
+    border-radius: 14px;
     cursor: pointer;
     border: none;
     padding: 10px 14px;
@@ -14,10 +26,6 @@
     margin: 0px 50px 0px 50px;
     text-decoration: none;
     font-size: 20px;
-}
-
-.buttons:hover, .buttons-active {
-    font-weight: 600;
 }
 
 .buttons, .buttons-active{
@@ -76,11 +84,29 @@
     color: #053C5E;
 }
 
-.card{
+.cardd, .carddd{
     transition: box-shadow 250ms ease-in-out;
+    border-radius: 30px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
 }
 
-.card:hover{
+.card-body {
+    border-radius: 30px;
+}
+
+.cardd-body {
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.carddd:hover, .cardd:hover{
     box-shadow: 1px 5px 10px #888888;
 }
 

@@ -56,7 +56,7 @@ html {
       transition: background .2s ease-in-out;
   }
   .btn-switch__radio_yes:checked ~ .btn-switch__label:before {
-      background: #6ad500;
+      background: #b16ab1;
   }
   .btn-switch__label_no:after {
       content: "";

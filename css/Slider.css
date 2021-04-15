@@ -1,7 +1,8 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
     .PercentageSlider {
       overflow: hidden;
-      width: 500px;
+      width: 60%;
+      
       -webkit-appearance: none;
       background-color: #a7a7aac9;
       border-radius: 16px;

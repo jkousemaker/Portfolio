@@ -1,4 +1,4 @@
-const gambleButton = document.querySelector('.glow-on-hover');
+const gambleButton = document.querySelector('.gamble-button');
 const pointDisplayer = document.querySelector('.points');
 const winnerText = document.querySelector('.winner');
 const loserText = document.querySelector('.loser');
@@ -89,9 +89,9 @@ gambleButton.addEventListener('click' , function(){
         
         if (higherSelector){
             higherPercentage = 100 - chosenPercentage;
-            console.log("You chose higher, these are your percentages : " + higherPercentage + "% - 100%");
+            console.log("You chose higher, your range is : " + higherPercentage + " to 100");
         }else{
-            console.log("You chose lower, these are your percentages : " + "0% - " + chosenPercentage + "%");
+            console.log("You chose lower, your range : " + "0 to " + chosenPercentage);
             lowerPercentage = chosenPercentage;
         }
 
@@ -110,7 +110,7 @@ gambleButton.addEventListener('click' , function(){
 const calculateProfit = function(){
     console.log("calculateProfit--------------")
     let stakes = 100 / chosenPercentage;
-    console.log("stakes: " + input + "(input) x " + stakes);
+    console.log("stakes: " + input + "(input) x " + stakes + "(multiplier)");
     profit = input * stakes;
     console.log("profit: " + profit);
     console.log("-----------------------------")
@@ -125,7 +125,7 @@ const calculateWin = function(){
 
 
 
-    if(higher){
+    if(higherSelector){
         if (higherPercentage < randomNumber){
             winnerText.classList.add("result");
             setTimeout(() => {  winnerText.classList.remove("result"); }, 2000);
@@ -140,7 +140,7 @@ const calculateWin = function(){
             console.log("This is your new balance : " + balance);
         }
     }else{
-        if (lowerPercentage < randomNumber){
+        if (lowerPercentage > randomNumber){
             winnerText.classList.add("result");
             setTimeout(() => {  winnerText.classList.remove("result");; }, 2000);
             win();
