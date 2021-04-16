@@ -2,7 +2,7 @@
     .PercentageSlider {
       overflow: hidden;
       width: 60%;
-      
+      outline: none;
       -webkit-appearance: none;
       background-color: #a7a7aac9;
       border-radius: 16px;
