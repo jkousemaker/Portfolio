@@ -15,7 +15,7 @@ body.themer {
 }
 
 .cardd.themer, .cardd-body.themer, .carddd.themer{
-    background-color: #715678;
+    background-color: #a76d83;
 }
 
 .card.themer {
@@ -31,11 +31,11 @@ body.themer {
 }
 
 .card-body.themer{
-    background-color: #715678;
+    background: #a76d83;
 }
 
 .list-group-item.themer {
-    background-color: #715678;
+    background-color: #a76d83;
 }
 
 .buttons:hover.themer {

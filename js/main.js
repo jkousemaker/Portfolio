@@ -5,7 +5,7 @@ const themeButton = document.querySelector('.theme-switcher')
 let darkMode = false;
 
 const swapTheme = function(){
-    const elements = document.querySelectorAll('.card1, .card2, .card3, .carddd, .cardd-body, .btn-switch.themer, .points, .question, .points, .card1, .buttons-active, .card:hover, .active-navbut, .purple, .display-3, .list-group, .white, .card, body, .card-body, .list-group-item, .head, .jumbotron, .list-group-item, .white')
+    const elements = document.querySelectorAll('.sun-moon, .card1, .card2, .card3, .carddd, .cardd-body, .btn-switch.themer, .points, .question, .points, .card1, .buttons-active, .card:hover, .active-navbut, .purple, .display-3, .list-group, .white, .card, body, .card-body, .list-group-item, .head, .jumbotron, .list-group-item, .white')
 
     for (let i = 0; i < elements.length; i++){
         elements[i].classList.toggle("themer")
@@ -13,7 +13,8 @@ const swapTheme = function(){
     for (let k = 0; k < thumbnailPics.length; k++) {
         thumbnailPics[k].classList.toggle("img-thumbnail")
     }
-        
+    
+
     if (darkMode){
         darkMode = false;
         localStorage.setItem("darkMode", darkMode);

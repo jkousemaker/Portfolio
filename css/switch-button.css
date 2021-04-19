@@ -1,14 +1,8 @@
-.switch-container{
-    align-self: flex-end;
-    position: absolute;
-    right: 10px;
-    top: 35px; 
-}
 .switch {
-    position: relative;
-    display: inline-block;
+    position: absolute;
     width: 60px;
     height: 34px;
+    right: 1%;
 }
 .switch input {
     opacity: 0;
