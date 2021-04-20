@@ -10,8 +10,13 @@
     background:  linear-gradient(to right, #12c2e95b, #c471ed, #f64f5a52);
 }
 
+.carddd.themer {
+    border-radius: 30px;
+}
+
 body.themer {
     background: linear-gradient(to left, #642b73,#9e7888, #c6426e);
+    max-height: 100%;
 }
 
 .cardd.themer, .cardd-body.themer, .carddd.themer{
@@ -22,19 +27,19 @@ body.themer {
     background: #9893DA;
 }
 
-.card:hover.themer{
-    box-shadow: 1px 5px 10px #9893daa8;
-}
-
 .list-group.themer{
     color: white;
+}
+
+.list-group-item.themer {
+    border: 0px solid rgba(255, 255, 255, 0.555);
 }
 
 .card-body.themer{
     background: #a76d83;
 }
 
-.list-group-item.themer {
+.list-items.themer {
     background-color: #a76d83;
 }
 
@@ -47,7 +52,7 @@ body.themer {
 }
 
 .white.themer{
-    color: rgb(177, 177, 177);
+    color: rgb(216, 216, 216);
 }
 
 .head.themer {
@@ -55,7 +60,7 @@ body.themer {
 }
 
 .purple.themer{
-    color: #ebebeccc;
+    color: rgba(243, 243, 243, 0.904);
 }
 
 

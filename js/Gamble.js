@@ -27,6 +27,7 @@ let chosenPercentage = 0;
 let higherPercentage = 0;
 let lowerPercentage = 0;
 let profit = 0;
+let noPoint = 0;
 let winner = true;
 
 if(higherSelector){
@@ -96,9 +97,12 @@ gambleButton.addEventListener('click' , function(){
         }
 
         calculateWin();
-    }else if(input > 0 && input <= balance){
+    }else if(balance == 0){
         alert("You don't have enough credits. 100 credits have been added to your balance for a re-try. :)");
-        balance =+ 100;
+        if (noPoint != 3){
+            balance =+ 100;
+            noPoint++;
+        }
         pointDisplayerUpdater();
     }else if(input > balance){
         alert("You don't have enough coins to gamble that amount!");
