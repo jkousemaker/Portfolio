@@ -6,9 +6,26 @@ let percentageSlider = document.getElementById("id3");
 let higherSelector = document.getElementById("higher").checked;
 let lowerSelector = document.getElementById("lower").checked;
 let sliderOutput = document.getElementById("slider-pointer");
+let rangePointer1 = document.getElementById("rangePointer1");
+let rangePointer2 = document.getElementById("rangePointer2");
+let randomPointer = document.getElementById("randomPointer");
+let balanceStorage = parseInt(localStorage.getItem("storageBalance")) || 1000;
 
 percentageSlider.oninput = function(){
+    higherSelector = document.getElementById("higher").checked;
+    lowerSelector = document.getElementById("lower").checked;
+    chosenPercentage = percentageSlider.value;
+    higherPercentage = 100 - chosenPercentage;
+
     sliderOutput.innerHTML = this.value;
+    console.log(higherSelector);
+    if(higherSelector){
+        rangePointer1.innerHTML = higherPercentage;
+        rangePointer2.innerHTML = "100";
+    }else{
+        rangePointer1.innerHTML = "0";
+        rangePointer2.innerHTML = chosenPercentage;
+    }
 }
 
 function Higher(){
@@ -38,13 +55,12 @@ if(higherSelector){
 
 
 const updateStorageBalance = function(){
-    balanceStorage = parseInt(localStorage.getItem("storageBalance"));
     console.log("Storage : " + balanceStorage);
     if (balanceStorage != 1000){
     console.log("Balance has been updated using local storage : " + balance);
     balance = balanceStorage;
     }else{
-        balane = 1000;
+        balance = 1000;
     }
     
 }
@@ -62,6 +78,7 @@ const pointDisplayerUpdater = function(){
 
 
 updateStorageBalance();
+
 pointDisplayerUpdater();
 
 gambleButton.addEventListener('click' , function(){
@@ -126,6 +143,7 @@ const calculateWin = function(){
     let randomNumber = Math.floor(Math.random() * 101); 
 
     console.log("Random number : " + randomNumber);
+    randomPointer.innerHTML = randomNumber;
 
 
 

@@ -30,6 +30,14 @@
 
     }
 
+    .PercentageSlider::-ms-fill-lower {
+      background-color: black;
+    }
+
+    .PercentageSlider::-ms-fill-upper {
+      background-color: pink;
+    }
+
     .PercentageSlider::-webkit-slider-thumb.higher {
         box-shadow: -300px 0 0 300px #2a2a2ec9;
     }
