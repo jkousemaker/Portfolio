@@ -3,7 +3,15 @@
     font-weight: 600;
 }
 
+.game {
+    display: flex;
+    margin-top: 4%;
+}
+
 .card1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap:wrap;
   padding: 1.5em;
   padding-top: 1.5em;
   padding-bottom: 1.5;
@@ -11,10 +19,11 @@
   box-shadow: 0 2px 20px rgba(182, 178, 178, 0.781);
   border-radius: 30px;
   margin: auto;
-  margin-top: 8%;
   opacity: 70%;
-  width: 82%;
+  width: 1000px;
   max-height: 828px;
+
+  min-width: 702.59px;
 }
 
 .card2 {
@@ -23,7 +32,8 @@
     padding-bottom: 2em;
     padding-right: 3em;
     padding-left: 3em;
-    width: 100%;
+    min-width: 654px;
+    max-width: 700px;
     background-color: white;
     box-shadow: 1px 5px 10px rgba(182, 178, 178, 0.781);
     border-radius: 30px;
@@ -35,16 +45,15 @@
 }
 
 .card3 {
-    align-self: center;
-    justify-self: center;
     width: 100%;
-    margin-bottom: 70%;
+    text-align: center;
+
     background-color: white;
     border-radius:  40px;
     padding-right: 27px;
     padding-left: 27px;
     padding-top: 10px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
     box-shadow: 1px 5px 10px rgba(182, 178, 178, 0.781);
     transition: box-shadow 250ms ease-in-out;
 }
@@ -146,8 +155,8 @@ p.slider-pointer {
 }
 
 .inputCoins {
-    margin-left: 150px;
-    margin-right: 150px;
+    margin-left: 20%;
+    margin-right: 20%;
     margin-bottom: 10px;
     padding-bottom: 0px;
     height: 37.53px;

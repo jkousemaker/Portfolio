@@ -2,9 +2,27 @@
     transition-duration: 0.8s;
 }
 
-.jumbotron{
+.jumbotron {
     padding: 1em;
     padding-bottom: 20px;
+}
+
+.body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.row1 {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.col1, .col2, .col3, .card4 {
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .card-imge {
@@ -107,6 +125,7 @@
     font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
     margin-left: 1px;
+    margin-bottom: 1rem;
 }
 
 .cardd {
