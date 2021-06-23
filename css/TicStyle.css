@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+  }
+
+  html, body {
+    height: 100%;
+    width: 100%;
+  }
+
+  body {
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    font-family: "Courier New", Courier, monospace;
+  }
+  
+  main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .padding {
+    padding: 10px;
+  }
+  
+  /* Add correct CSS here for a grid overview */
+  .head {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .input {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .game {
+        display: flex;
+        justify-content: center;
+        flex-wrap: nowrap;
+        flex-direction: row;
+  }
+  
+  .field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tic-tac-toe-board {
+    width: 400px;
+    height: 400px;
+    background-color: #34495e;
+    color: #fff;
+    border: 6px solid #2c3e50;
+    border-radius: 10px;
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  }
+  
+  .box {
+    border: 6px solid #2c3e50;
+    border-radius: 2px;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .btn-leaderboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btns {
+    display: flex;
+    justify-content: center;
+  }
+
+  .resetgame-btn, .resetboard-btn {
+    width: 60px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
