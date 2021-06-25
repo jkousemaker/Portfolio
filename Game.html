@@ -33,35 +33,29 @@
 		<div class="row">
 			<div class="container">
 				<nav>
-					<ul class="nav nav-pills justify-content-center">
-						<li class="nav-item but">
+					<div class="navb">
 							<a href="index.html" class="buttons">Home</a>
-						</li>
-						<li>
 							<a href="Game.html" class="buttons-active">Tic-Tac-Toe</a>
-						</li>
-						<li class="nav-item but">
 							<a href="Gamble.html" class="buttons">Gamble Game</a>
-						</li>
-						<li class="nav-item but">
 							<button= class="buttons email-getter" data-bs-toggle="tooltip" data-bs-placement="right" title="" data-bs-original-title="j.l.kousemaker@gmail.com (Click to copy)">
 								Contact me
 							</button>
-						</li>
-					</ul>
+					</div>
 				</nav>
 			</div>
 		</div>
 	</div>
 	  <main>
 		<section class="padding main">
-			<div class = "head">
+			<div class = "header padding">
 				<div class = "padding input">
 				  <label for="pname">Player Name:</label>
-				  <input type="text" id="pname" name="pname"><br><br>
+				  <input type="text" id="pname" class="input-name" placeholder="Enter here :" name="pname"><br>
 				  <label for="psymbol">Symbol:   </label>
-				  <input type="text" id="psymbol" name="psymbol"><br><br>
-				  <button class="input-btn">Submit</button>
+				  <input type="text" id="psymbol" class="input-symbol" placeholder="Enter here :" name="psymbol"><br><br>
+				  <div class="input-div">
+					  <button class="input-btn">Submit</button>
+				  </div>
 				</div>
 				<div class = "padding">
 				  <p>Current Reward:</p>
@@ -70,22 +64,24 @@
 			  </div>
 		  <div class = "game">
 			<div class = "player1-indicator padding">
-			  <div class = "padding field">
-				<p class= "padding">Player: </p>
-				<p class="player1Name"></p>
-			  </div>
-			  <div class = "padding field">
-				<p class = "padding ">Symbol: </p>
-				<p class="player1Symbol padding"></p>
-			  </div>
-			  <div class = "padding field">
-				<p class = "padding" >Balance: </p>
-				<p class="player1Balance padding"></p>
-			  </div>
-			  <div class = "padding field">
-				<p class = "padding" >Win Streak: </p>
-				<p class="player1Streak padding"></p>
-			  </div>
+				<div class = "sidebar">
+					<div class = "field">
+						<p class= "">Player: </p>
+						<p class="player1Name reset padding"></p>
+					</div>
+					<div class = "field">
+						<p class = "">Symbol: </p>
+						<p class="player1Symbol reset padding"></p>
+					</div>
+					<div class = "field">
+						<p class = "" >Balance: </p>
+						<p class="player1Balance reset padding"></p>
+					</div>
+					<div class = "field">
+						<p class = "" >Win Streak: </p>
+						<p class="player1Streak reset padding"></p>
+					</div>
+				</div>
 			</div>
 			<div class="tic-tac-toe-board board">
 			  <div class="box box-field"></div>
@@ -99,22 +95,24 @@
 			  <div class="box box-field"></div>
 			</div>
 			<div class = "player2-indicator padding">
-			  <div class = "padding field">
-				<p class= "padding">Player: </p>
-				<p class="player2Name"></p>
-			  </div>
-			  <div class = "padding field">
-				<p class = "padding ">Symbol: </p>
-				<p class="player2Symbol padding"></p>
-			  </div>
-			  <div class = "padding field">
-				<p class = "padding" >Balance: </p>
-				<p class="player2Balance padding"></p>
-			  </div>
-			  <div class = "padding field">
-				<p class = "padding" >Win Streak: </p>
-				<p class="player2Streak padding"></p>
-			  </div>
+				<div class = "sidebar">
+					<div class = "field">
+						<p class= "">Player: </p>
+						<p class="player2Name reset padding"></p>
+					</div>
+					<div class = "field">
+						<p class = " ">Symbol: </p>
+						<p class="player2Symbol reset padding"></p>
+					</div>
+					<div class = "field">
+						<p class = "" >Balance: </p>
+						<p class="player2Balance reset padding"></p>
+					</div>
+					<div class = "field">
+						<p class = "" >Win Streak: </p>
+						<p class="player2Streak reset padding"></p>
+					</div>
+				</div>
 			</div>
 		  </div>
 		  <div class = "btn-leaderboard">
@@ -124,18 +122,18 @@
 					<div class = "players">
 						<div class = "player-list">
 							<p>Player Name:</p>
-							<p class = "p playername1">None</p>
-							<p class = "p playername2">None</p>
+							<p class = "p playername1 reset">None</p>
+							<p class = "p playername2 reset">None</p>
 						</div>
 						<div class = "player-list">
 							<p>Player Score:</p>
-							<p class = "p playerscore1">None</p>
-							<p class = "p playerscore2">None</p>
+							<p class = "p playerscore1 reset">None</p>
+							<p class = "p playerscore2 reset">None</p>
 						</div>
 						<div class = "player-list">
 							<p>Player Level:</p>
-							<p class = "p playerlevel1">None</p>
-							<p class = "p playerlevel2">None</p>
+							<p class = "p playerlevel1 reset">None</p>
+							<p class = "p playerlevel2 reset">None</p>
 						</div>
 					</div>
 				</div>
@@ -148,7 +146,8 @@
 			</div>
 		</section>
 	  </main>
-	
-	<script src="js/main.js"></script>
+
+	  <script src="js/main.js"></script>
+	<script type="module" src="js/TicTacToe.js"></script>
 </body>
 </html>

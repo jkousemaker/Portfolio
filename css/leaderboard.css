@@ -17,8 +17,8 @@
     flex-wrap: nowrap;
     justify-content: space-evenly;
     flex-direction: row;
+    width: 300px;
 }
-
 
 .p {
     display: flex;

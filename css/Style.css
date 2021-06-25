@@ -8,6 +8,18 @@
     padding-bottom: 20px;
 }
 
+.navb {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
 .body {
     width: 100%;
     height: 100%;
@@ -22,8 +34,8 @@
 }
 
 .col1, .col2, .col3, .card4 {
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 75px;
+    margin-right: 75px;
 }
 
 .card-imge {
@@ -40,12 +52,17 @@
     border: none;
     padding: 8px 14px;
     overflow: hidden;
-    width: 1000.94px;
+    width: 156px;
+    height: 43px;
+    text-align: center;
+    display: flex;
     position: relative;
-    margin: 0px 50px 0px 50px;
+    /* margin: 0px 50px 0px 50px; */
     text-decoration: none;
     font-size: 20px;
     transition-duration: 0.4s;
+    align-items: center;
+    justify-content: center;
 }
 
 .buttons, .buttons-active{
@@ -250,6 +267,3 @@
     border: 1px solid rgba(0,0,0,.125);
 }
 
-.bagus-img.img-dark-mode, .code-img.img-dark-mode, .mondriaan-img.img-dark-mode {
-
-}

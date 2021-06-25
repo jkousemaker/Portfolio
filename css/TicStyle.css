@@ -4,7 +4,6 @@
 
   html, body {
     height: 100%;
-    width: 100%;
   }
 
   body {
@@ -18,11 +17,13 @@
   main {
     width: 100%;
     height: 100%;
+    /* margin: auto; */
+    /* margin-bottom: 20px; */
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
+    /* flex-direction: column; */
     justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
   }
   
   .padding {
@@ -30,7 +31,7 @@
   }
   
   /* Add correct CSS here for a grid overview */
-  .head {
+  .header {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -41,21 +42,101 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    width: 250px;
+    border-radius: 10px;
+  }
+
+  .input.themer {
+    border: solid;
+    border-width: 2px;
+    background-color: rgba(255, 255, 255, 0.548);
+    border-color: purple;
+    border-radius: 20px;
   }
   
+  .input:hover {
+    box-shadow: 0 2px 20px rgb(117 117 117);
+    border-radius: 20px;
+    padding: 15px;
+  }
+
+  .input:hover.themer {
+    box-shadow: none;
+  }
+
+  .input-name,.input-symbol {
+    width: 100%;
+    height: 34px;
+    padding: .375rem .75rem;
+    font-size: 15px;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-family: inherit;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    border-color: #804d809d;
+    outline: none;
+    border-radius: 10px;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  }
+
+  .input-name:focus, .input-symbol:focus {
+    border-color: #ad6da6;
+    box-shadow: 1px 5px 10px rgba(182, 178, 178, 0.781);
+}
+
+.input-div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+  
+.input-btn {
+  width: 100px;
+  border: none;
+  border-radius: 6px;
+  background-color: #c52fc582;
+  color: white;
+  outline: 1px;
+}
+
   .main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    /* height: 560px; */
+    max-width: 1400px;
+    border-radius: 30px;
+    box-shadow: 0 2px 20px rgba(182, 178, 178, 0.781);
+    background-color: rgb(255, 255, 255);
+    /* height: 570px; */
+    padding: 2%;
+    justify-content: space-around;
+    margin: 2%;
+  }
+
+  .main.themer {
+    opacity: 90%;
+    background: linear-gradient(to right, #12c2e95b, #c471ed, #f64f5a52);
+  }
+  
+  .game {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
-    align-items: center;
-  }
-  
-  .game {
-        display: flex;
-        justify-content: center;
-        flex-wrap: nowrap;
-        flex-direction: row;
+    /* height: 400px; */
+    width: 100%;
+    max-width: 630px;
   }
   
   .field {
@@ -63,21 +144,45 @@
     flex-direction: column;
     align-items: center;
   }
+
+  .sidebar {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .player1-indicator,.player2-indicator {
+    border-radius: 20px;
+    opacity: 80%;
+    border-style: solid;
+    border-color: purple;
+    border-width: 1px;
+    background-color: rgba(255, 255, 255, 0.548);
+    /* margin: 10px; */
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: space-between; */
+  }
+
   
   .tic-tac-toe-board {
     width: 400px;
+    min-width: 300px;
     height: 400px;
     background-color: #34495e;
     color: #fff;
-    border: 6px solid #2c3e50;
-    border-radius: 10px;
+    border: 6px solid #34495e;
+    border-radius: 20px;
     display: grid;
+    padding: 2px;
     grid-template: repeat(3, 1fr) / repeat(3, 1fr);
   }
   
   .box {
     border: 6px solid #2c3e50;
-    border-radius: 2px;
+    border-radius: 20px;
     font-family: Helvetica;
     font-weight: bold;
     font-size: 4em;
@@ -86,6 +191,13 @@
     align-items: center;
     cursor: pointer;
     padding: 10px;
+    margin: 1px;
+  }
+
+  .box:hover {
+    box-shadow: 0 2px 20px rgb(0 0 0 / 44%);
+    border-radius: 30px;
+    border: 9px solid #2c3e50;
   }
   
   .btn-leaderboard {
@@ -100,7 +212,13 @@
   }
 
   .resetgame-btn, .resetboard-btn {
-    width: 60px;
-    margin-bottom: 10px;
-    margin-top: 10px;
+    width: 110px;
+    height: 35px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    border-radius: 8px;
+    border: none;
+    background: #1987c0;
+    color: white;
+    margin: 10px;
   }

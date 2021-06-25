@@ -1,3 +1,4 @@
+    /*Variables*/
 const gambleButton = document.querySelector('.gamble-button');
 const pointDisplayer = document.querySelector('.points');
 const winnerText = document.querySelector('.winner');
@@ -11,7 +12,24 @@ let rangePointer2 = document.getElementById("rangePointer2");
 let randomPointer = document.getElementById("randomPointer");
 let balanceStorage = parseInt(localStorage.getItem("storageBalance")) || 1000;
 
-percentageSlider.oninput = function(){
+let balance = 1000;
+let oldBalance = 0;
+let input = 0;
+let hLower = 0;
+let chosenPercentage = 0;
+let higherPercentage = 0;
+let lowerPercentage = 0;
+let profit = 0;
+let noPoint = 0;
+let winner = true;
+
+
+updateStorageBalance();
+pointDisplayerUpdater();
+
+    /*Visual effects and addEventListeners*/
+
+percentageSlider.oninput = function()   {
     higherSelector = document.getElementById("higher").checked;
     lowerSelector = document.getElementById("lower").checked;
     chosenPercentage = percentageSlider.value;
@@ -27,59 +45,6 @@ percentageSlider.oninput = function(){
         rangePointer2.innerHTML = chosenPercentage;
     }
 }
-
-function Higher(){
-    percentageSlider.classList.add("higher");
-}
-
-function Lower(){
-    percentageSlider.classList.remove("higher");
-}
-
-let balance = 1000;
-let oldBalance = 0;
-let input = 0;
-let hLower = 0;
-let chosenPercentage = 0;
-let higherPercentage = 0;
-let lowerPercentage = 0;
-let profit = 0;
-let noPoint = 0;
-let winner = true;
-
-if(higherSelector){
-    console.log("higher : " + higherSelector);
-}else{
-    console.log("lower : " + lowerSelector);
-}
-
-
-const updateStorageBalance = function(){
-    console.log("Storage : " + balanceStorage);
-    if (balanceStorage != 1000){
-    console.log("Balance has been updated using local storage : " + balance);
-    balance = balanceStorage;
-    }else{
-        balance = 1000;
-    }
-    
-}
-const saveStorageBalance = function(){
-    localStorage.setItem("storageBalance", 1000)  //Change 1000 to balance!!!!!!!!!!!!!!
-}
-const pointDisplayerUpdater = function(){
-    pointDisplayer.classList.add("fade-out");
-    pointDisplayer.classList.remove("fade-out");
-    pointDisplayer.innerHTML = parseInt(balance);
-    pointDisplayer.classList.remove("fade-in");
-    pointDisplayer.classList.remove("fade-in");
-}
-
-
-
-updateStorageBalance();
-
-pointDisplayerUpdater();
 
 gambleButton.addEventListener('click' , function(){
     console.clear();
@@ -102,8 +67,6 @@ gambleButton.addEventListener('click' , function(){
         console.log("-----------------------------")
         balance -= input;
         pointDisplayerUpdater(); 
-        // choosePercentage();
-        // 
         
         if (higherSelector){
             higherPercentage = 100 - chosenPercentage;
@@ -128,7 +91,41 @@ gambleButton.addEventListener('click' , function(){
     }
 })
 
-const calculateProfit = function(){
+    /*Functions*/
+
+function Higher(){
+    percentageSlider.classList.add("higher");
+}
+
+function Lower(){
+    percentageSlider.classList.remove("higher");
+}
+
+
+function updateStorageBalance(){
+    console.log("Storage : " + balanceStorage);
+    if (balanceStorage != 1000){
+    console.log("Balance has been updated using local storage : " + balance);
+    balance = balanceStorage;
+    }else{
+        balance = 1000;
+    }
+    
+}
+
+function saveStorageBalance() {
+    localStorage.setItem("storageBalance", balance)
+}
+
+function pointDisplayerUpdater() {
+    pointDisplayer.classList.add("fade-out");
+    pointDisplayer.classList.remove("fade-out");
+    pointDisplayer.innerHTML = parseInt(balance);
+    pointDisplayer.classList.remove("fade-in");
+    pointDisplayer.classList.remove("fade-in");
+}
+
+function calculateProfit() {
     console.log("calculateProfit--------------")
     let stakes = 100 / chosenPercentage;
     console.log("stakes: " + input + "(input) x " + stakes + "(multiplier)");
@@ -138,14 +135,11 @@ const calculateProfit = function(){
     return profit;
 }
 
-const calculateWin = function(){
+function calculateWin() {
     console.log("calculateWin-----------------")
     let randomNumber = Math.floor(Math.random() * 101); 
 
-    console.log("Random number : " + randomNumber);
-    randomPointer.innerHTML = randomNumber;
-
-
+    randomPointer.textContent = randomNumber;
 
     if(higherSelector){
         if (higherPercentage < randomNumber){
@@ -178,7 +172,7 @@ const calculateWin = function(){
     }
 }
 
-const win = function(){
+function win(){
     console.log("win--------------------------")
     balance += calculateProfit();
     console.log("Old Balance : " + oldBalance);
