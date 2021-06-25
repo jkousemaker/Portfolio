@@ -29,13 +29,14 @@
 
 .row1 {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
 }
 
 .col1, .col2, .col3, .card4 {
-    margin-left: 75px;
-    margin-right: 75px;
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
 .card-imge {
