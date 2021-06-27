@@ -9,15 +9,15 @@
     color: rgba(255, 255, 255, 0.836);
 }
 
-.card2.themer, .card3.themer {
+.gcard2.themer, .gcard3.themer {
     transition: box-shadow 250ms ease-in-out;
 }
 
-.card2.themer:hover, .card3.themer:hover {
+.gcard2.themer:hover, .gcard3.themer:hover {
     box-shadow: 1px 5px 10px rgba(70, 70, 70, 0.781);
 }
 
-.card1.themer {
+.gcard1.themer {
     box-shadow: 0px 0px 0px white;
     background:  linear-gradient(to right, #12c2e95b, #c471ed, #f64f5a52);
 }

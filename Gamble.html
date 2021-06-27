@@ -22,20 +22,22 @@
 	<title>Portofolio</title>
 </head>
 <body>
-	<div class="jumbotron jumbotron-fluid" style="margin: 0px 0px 5px 0px">
-		<p class="display-name">Justin Kousemaker</p>
-		<div class="bio-theme-switcher">
+	<div class="jumbotron jumbotron-fluid">
+		<div class="biography">
+			<p class="display-name">Justin Kousemaker</p>
 			<div class="bio">
-				<p>Loves video games and learning about new stuff.</p>
+				<p class="introduction">Loves video games and learning about new stuff.</p>
+				<div class="bio-theme-switcher">
+					<div class="switcher">
+						<img src="assets/themeswitcher.png" class="sun-moon" alt="Sun" />
+						
+						<label class="switch">
+								<input type="checkbox" class="themeswitch">
+								<span class="slider round theme-switcher"></span>
+						</label>	
+					</div>							
+				</div>
 			</div>
-			<div class="switcher">
-				<img src="assets/themeswitcher.png" class="sun-moon" alt="Sun" />
-				
-				<label class="switch">
-						<input type="checkbox" class="themeswitch">
-						<span class="slider round theme-switcher"></span>
-				</label>	
-			</div>							
 		</div>
 		<div class="row">
 			<div class="container">
@@ -53,13 +55,13 @@
 		</div>
 	</div>
 		<div class="game">
-			<div class="card1">
-						<div class="card2">
+			<div class="gcard1">
+						<div class="gcard2">
 							<h1 class="question">Welcome to Justin's Gambling Game!</h1>
 							<div class="inputCoins">
 								<input type="text" id="coin-input" class="coin-input" placeholder="Enter how many coins you want to gamble :"><br>
 							</div>
-							<label for="id3" class="white form-label">Percentage to win:</label>
+							<label for="id3" class="form-label">Percentage to win:</label>
 							<p style="margin-bottom: 0; height: 19px">
 								<span>0</span>
 								<input type="range" min="1" max="100" value="50" class="PercentageSlider" id="id3">
@@ -85,7 +87,7 @@
 							</div>
 						</div>
 					<div class="col9">
-						<div class="card3">
+						<div class="gcard3">
 							<div class="points centered">0</div>
 							<h1 class="points-text">Points</h1>
 						</div>

@@ -17,7 +17,6 @@
     flex-direction: row;
     align-content: center;
     justify-content: space-evenly;
-    margin: 10px;
 }
 
 .body {
@@ -25,6 +24,19 @@
     height: 100%;
     display: flex;
     justify-content: center;
+}
+
+a, .buttons {
+        /* margin: 10px; */
+        margin-right: 20px;
+        margin-left: 20px;
+        margin-top: 7px;
+        margin-bottom: 7px;
+}
+
+.introduction {
+    margin-right: 30px;
+    margin-left: 30px;
 }
 
 .row1 {
@@ -90,14 +102,19 @@
     color: rgba(255, 255, 255, 0.548);
     box-shadow: 1px 5px 10px #888888;
 }
+
+.biography {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .bio {
-    width: 600px;
     color: rgb(177, 177, 177);
     font-size: 1.5rem;
     text-decoration: underline;
     font-style: italic;
     font-weight: 300;
-    margin: 10px;
     justify-content: center;
     align-items: center;
     display: flex;
@@ -147,9 +164,14 @@
     margin-bottom: 1rem;
 }
 
+.card1, .card2, .card3, .card4, .card5, .card6, .cardd {
+    width: 18rem;
+}
+
 .cardd {
     margin-bottom: 10px;
     border-radius: 30px;
+    width: 18rem;
 }
 
 .cardd, .carddd{
@@ -202,7 +224,6 @@
     margin: 0px;
     color: rgba(255, 255, 255, 0.863);
     font-family: 'Inter', sans-serif;
-    max-height: 45px;
     font-size: 2.5rem;
     text-align: center;
     font-weight: 700;

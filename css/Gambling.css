@@ -22,7 +22,7 @@ body {
     /* margin-top: 70px; */
 }
 
-.card1 {
+.gcard1 {
     display: flex;
     flex-wrap: wrap;
     padding: 1.5em;
@@ -41,7 +41,7 @@ body {
     flex-direction: row;
 }
 
-.card2 {
+.gcard2 {
         /* opacity: 100%; */
         padding-top: 2em;
         padding-bottom: 2em;
@@ -55,11 +55,11 @@ body {
         transition: box-shadow 250ms ease-in-out;
 }
 
-.card2:hover, .card3:hover {
+.gcard2:hover, .gcard3:hover {
     box-shadow: 1px 5px 10px #181818a8;
 }
 
-.card3 {
+.gcard3 {
     width: 230px;
     text-align: center;
 
