@@ -23,12 +23,13 @@ let profit = 0;
 let noPoint = 0;
 let winner = true;
 
-
+//Functions that have to start when page is opened.
 updateStorageBalance();
 pointDisplayerUpdater();
 
     /*Visual effects and addEventListeners*/
 
+//Function which runs if slider is used.
 percentageSlider.oninput = function()   {
     higherSelector = document.getElementById("higher").checked;
     lowerSelector = document.getElementById("lower").checked;
@@ -46,6 +47,7 @@ percentageSlider.oninput = function()   {
     }
 }
 
+//addEventListener for Gamble button.
 gambleButton.addEventListener('click' , function(){
     console.clear();
     console.log("Button Click-----------------")
@@ -78,7 +80,7 @@ gambleButton.addEventListener('click' , function(){
 
         calculateWin();
     }else if(balance == 0){
-        alert("You don't have enough credits. 100 credits have been added to your balance for a re-try. :)");
+        alert("You don't have any credits. 100 credits have been added to your balance for a re-try. :)");
         if (noPoint != 3){
             balance =+ 100;
             noPoint++;
@@ -101,9 +103,11 @@ function Lower(){
     percentageSlider.classList.remove("higher");
 }
 
-
+//Updates local balance of player w storage saved balance.
 function updateStorageBalance(){
     console.log("Storage : " + balanceStorage);
+
+    //Checks if storage saved balance exists.
     if (balanceStorage != 1000){
     console.log("Balance has been updated using local storage : " + balance);
     balance = balanceStorage;
@@ -113,18 +117,17 @@ function updateStorageBalance(){
     
 }
 
+//Saves local balance in storage balance.
 function saveStorageBalance() {
     localStorage.setItem("storageBalance", balance)
 }
 
+//Updates slider pointer.
 function pointDisplayerUpdater() {
-    pointDisplayer.classList.add("fade-out");
-    pointDisplayer.classList.remove("fade-out");
     pointDisplayer.innerHTML = parseInt(balance);
-    pointDisplayer.classList.remove("fade-in");
-    pointDisplayer.classList.remove("fade-in");
 }
 
+//Function which calculates how much profit the user wins.
 function calculateProfit() {
     console.log("calculateProfit--------------")
     let stakes = 100 / chosenPercentage;
@@ -135,6 +138,7 @@ function calculateProfit() {
     return profit;
 }
 
+//Function which calculates if the player has won.
 function calculateWin() {
     console.log("calculateWin-----------------")
     let randomNumber = Math.floor(Math.random() * 101); 
@@ -172,6 +176,7 @@ function calculateWin() {
     }
 }
 
+//Function which runs if the player has won.
 function win(){
     console.log("win--------------------------")
     balance += calculateProfit();
