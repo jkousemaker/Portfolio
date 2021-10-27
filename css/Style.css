@@ -87,6 +87,16 @@ a, .buttons {
     color: rgba(255, 255, 255, 0.548);
 }
 
+.button {
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 8px;
+    color: black;
+    margin: 30px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
 .buttons:hover {
     background-color: #0e7faf;
     box-shadow: 1px 1px 5px #888888;
@@ -289,3 +299,14 @@ a, .buttons {
     border: 1px solid rgba(0,0,0,.125);
 }
 
+.proj {
+    display: flex;
+    justify-content: center;
+}
+
+.projects-button {
+    border: 1px solid;
+    border-radius: 7px;
+    background: white;
+    margin: 20px;
+}
