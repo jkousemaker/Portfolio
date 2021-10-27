@@ -10,6 +10,7 @@ include 'jumbo.php';
     <div class="projects">
         <?php
             $sql = "SELECT * FROM projects;";
+            $lsql = "SELECT * FROM languages";
             $result = mysqli_query($conn, $sql);
             $resultCheck = mysqli_num_rows($result);
 
@@ -24,4 +25,3 @@ include 'jumbo.php';
         ?>
     </div>
 </Section>
-
