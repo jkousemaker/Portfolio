@@ -19,12 +19,12 @@
 			<div class="container">
 				<nav>
 					<div class="navb">
-							<a href="index.html" class="buttons-active">Home</a>
+							<a href="index.php" class="buttons-active">Home</a>
 							<a href="Game.html" class="buttons">Tic-Tac-Toe</a>
 							<a href="Gamble.html" class="buttons">Gamble Game</a>
-							<button= class="buttons email-getter" data-bs-toggle="tooltip" data-bs-placement="right" title="" data-bs-original-title="j.l.kousemaker@gmail.com (Click to copy)">
+							<a class="buttons email-getter" href="emailform.php" data-bs-toggle="tooltip" data-bs-placement="right" title="" data-bs-original-title="j.l.kousemaker@gmail.com (Click to copy)">
 								Contact me
-							</button>
+							</a>
 					</div>
 				</nav>
 			</div>

@@ -310,3 +310,15 @@ a, .buttons {
     background: white;
     margin: 20px;
 }
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin: 20px;
+}
+
+textarea {
+    margin: 15px!important;
+}
